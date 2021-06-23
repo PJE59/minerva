@@ -1,4 +1,5 @@
 from adafruit_motorkit import MotorKit
+import keyboard
 kit = MotorKit()
 
 while True:
