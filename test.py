@@ -1,1 +1,14 @@
-print('hello phil!')
+from adafruit_motorkit import MotorKit
+import keyboard  # using module keyboard
+kit = MotorKit()
+
+while True:
+    try:
+        if keyboard.is_pressed('a'):
+            kit.motor1.throttle = -1.0
+        else if keyboard.is_pressed('d'):
+            kit.motor1.throttle = 1.0
+        else:
+            kit.motor1.throttle = 0
+    except:
+        break
