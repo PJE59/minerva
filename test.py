@@ -16,8 +16,10 @@ while True:
         key = event.key
         if key == pygame.K_a:
             kit.motor1.throttle = -0.8
-        elif key == pygrame.K_d:
+        elif key == pygame.K_d:
             kit.motor1.throttle = 0.8
+        else:
+            kit.motor1.throttle = 0.0
         
             
              
