@@ -12,7 +12,7 @@ while True:
       if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
-      if event.type == KEYDOWN:
+      if event.type == pygame.KEYDOWN:
         key = event.key
         if key == pygame.K_a:
             kit.motor1.throttle = -0.8
