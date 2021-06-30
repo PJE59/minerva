@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minerva</title>
+    
+</head>
+<body>
+    <p id='key'>key</p>
+
+    <script defer>
+        console.log('starting script!!')
+        
+        var keyText = document.querySelector('#key')
+
+        document.onkeydown = checkKey;
+        function checkKey(e) {
+
+        e = e || window.event;
+
+            if (e.keyCode == '38') {
+                // up arrow
+            }
+            else if (e.keyCode == '40') {
+                // down arrow
+            }
+            else if (e.keyCode == '37') {
+                // left arrow
+                keyText.innerText = 'left'
+            }
+            else if (e.keyCode == '39') {
+                // right arrow
+                keyText.innerText = 'right'
+            }
+
+        }
+        document.onkeyup = ()=>{
+            keyText.innerText = 'press left or right...'
+        }
+
+
+    </script>
+</body>
+</html>
